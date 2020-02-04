@@ -1,0 +1,49 @@
+{
+    "title": "Social Determinants",
+    "name": "social-determinants",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node_modules/.bin/gulp watch"
+    },
+    "description": "This app is a prototype that demonstrates how social determinants of health could be collected and utilized within an EHR. The app uses LOINC's PRAPARE questionnaire as well as the Bootstrap SB-Admin-2 template.",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template",
+        "admin",
+        "app"
+    ],
+    "author": "UDBMI FHIR practicum",
+    "contributors": [
+        "Janette Vazquez (https://github.com/janvaz)",
+        "Michael Watkins (https://github.com/mwatkin8)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mwatkin8/Social-Determinants"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "5.10.2",
+        "bootstrap": "4.3.1",
+        "chart.js": "2.8.0",
+        "datatables.net-bs4": "1.10.19",
+        "jquery": "3.4.1",
+        "jquery.easing": "^1.4.1"
+    },
+    "devDependencies": {
+        "browser-sync": "2.26.7",
+        "del": "5.1.0",
+        "gulp": "4.0.2",
+        "gulp-autoprefixer": "7.0.0",
+        "gulp-clean-css": "4.2.0",
+        "gulp-header": "2.0.9",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "1.4.0",
+        "gulp-sass": "4.0.2",
+        "gulp-uglify": "3.0.2",
+        "merge-stream": "2.0.0"
+    }
+}
