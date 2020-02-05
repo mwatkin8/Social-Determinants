@@ -83,7 +83,7 @@ async function setDemographics(){
                 patient.address[i].country;
             document.getElementById('address').innerText = address
             document.getElementById('map').innerHTML = "<iframe width=\"90%\" height=\"90%\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/place?q=" +
-            encodeURI(address) + "&key=AIzaSyAfET6ypMUsGfFGgcDmdganLna01RoMqiA\" allowfullscreen></iframe>";
+            encodeURI(address) + "&key=AIzaSyCemb2iWu-QyLXTjxgTRIYhmjnnFLYOvf8\" allowfullscreen></iframe>";
         }
     };
 }
@@ -128,7 +128,7 @@ async function parsePRAPAREResponse(r){
     let address = r.item[1].item[3].answer[0].valueString;
     document.getElementById('address').innerText = address
     document.getElementById('map').innerHTML = "<iframe width=\"90%\" height=\"90%\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/place?q=" +
-    encodeURI(address) + "&key=AIzaSyAfET6ypMUsGfFGgcDmdganLna01RoMqiA\" allowfullscreen></iframe>";
+    encodeURI(address) + "&key=AIzaSyCemb2iWu-QyLXTjxgTRIYhmjnnFLYOvf8\" allowfullscreen></iframe>";
     //preferred language
     document.getElementById('language').innerText = r.item[0].item[4].answer[0].valueCoding.display;
     //race
