@@ -93,7 +93,7 @@
                src="https://clinicaltables.nlm.nih.gov/lforms-versions/17.3.2/fhir/R4/lformsFHIR.min.js"></script>
               <script>
                  async function renderForm(){
-                     let url = sessionStorage['server'] + '/Questionnaire?name=PRAPARE-Questionnaire';
+                     let url = sessionStorage['server'] + '/Questionnaire?name=insn_sdoh';
                      let request = new Request(url, {
                          method: 'get',
                          headers: {'Authorization': 'Bearer ' + sessionStorage['token']}
@@ -101,7 +101,7 @@
                      let response = await fetch(request);
                      let bundle = await response.json();
                      let fhirQ = bundle.entry[0].resource;
-                     sessionStorage['prapare_id'] = fhirQ.id;
+                     sessionStorage['insn_id'] = fhirQ.id;
                       // Convert FHIR Questionnaire to LForms format
                       var lformsQ = LForms.FHIR.R4.SDC.convertQuestionnaireToLForms(fhirQ);
                       // Turn off the top-level questions and controls (optional)
@@ -123,7 +123,7 @@
                             qr.item[3].item.length === 2 &&
                             qr.item[4].item.length === 4){
                                 if(!qr.hasOwnProperty('questionnaire')){
-                                    qr.questionnaire = 'Questionnaire/' + sessionStorage['prapare_id'];
+                                    qr.questionnaire = 'Questionnaire/' + sessionStorage['insn_id'];
                                 }
                                 if(!qr.hasOwnProperty('subject')){
                                     qr.subject = {
