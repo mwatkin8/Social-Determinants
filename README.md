@@ -9,6 +9,7 @@ This example uses Docker, the links below can help you get Docker installed.
     * Download latest .exe file
     * Follow installer
     * Open the Docker Quickstart Terminal and note the IP address the machine is running on (by the image of a whale), you will need this later.
+    ![windows_ip](img/windows_ip.png)
 
 ## 3. Create a SMART on FHIR sandbox
 This app was developed using an [HSPC Logica Sandbox](https://sandbox.logicahealth.org/), create an account and then create a new sandbox making sure that you use FHIR version R4, allow an open FHIR endpoint, and import sample patients, practitioners, and applications.
