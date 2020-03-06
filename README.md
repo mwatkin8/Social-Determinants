@@ -103,6 +103,6 @@ The app will then pull up with a summary for the selected patient. Since this is
 
 ![prapare](img/prapare.png)
 
-Your response will be saved to the sandbox upon completion and will redirect to a populated the summary page. Remembere that <b>each question must be answered</b>, so the app will prompt you to finish if you skip a field. If you enter a real address in the questionnaire, the map will render that new address rather than the original fake one.
+Your response will be saved to the sandbox upon completion and will redirect to a populated the summary page. Remember that <b>each question must be answered</b>, so the app will prompt you to finish if you skip a field. If you enter a real address in the questionnaire, the map will render that new address rather than the original fake one.
 
 ![final](img/final.png)
