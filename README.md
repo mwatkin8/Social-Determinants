@@ -8,23 +8,7 @@ This example uses Docker, the links below can help you get Docker installed.
 * Windows users: https://github.com/docker/toolbox/releases
     * Download latest .exe file
     * Follow installer
-
-## 2. Start the app server
-Open the terminal app (Mac) or the newly installed Docker Quickstart Terminal (Windows), go to the home directory of this project.
-
-Launch the server with the command <code>docker-compose -p <i>projectName</i> up --build &</code>
-
-Additional Docker commands if needed:
-* View server output: <code>docker logs <i>projectName</i>\_app_1</code>
-* Stop server: <code>docker stop <i>projectName</i>\_app_1</code>
-* Start server again: <code>docker start <i>projectName</i>\_app_1</code>
-* To wipe a previous build if you want to start over:
-    * <code>docker stop <i>projectName</i>\_app_1</code>
-    * <code>docker rm <i>projectName</i>\_app_1</code>
-    * <code>docker rmi <i>projectName</i>\_app</code>
-    * <code>docker volume prune</code>
-
-It will open your browser with a blank view of the app, you can close this since we will be SMART launching from the sandbox the way it would in an EHR.
+    * Open the Docker Quickstart Terminal and note the IP address the machine is running on (by the image of a whale), you will need this later.
 
 ## 3. Create a SMART on FHIR sandbox
 This app was developed using an [HSPC Logica Sandbox](https://sandbox.logicahealth.org/), create an account and then create a new sandbox making sure that you use FHIR version R4, allow an open FHIR endpoint, and import sample patients, practitioners, and applications.
@@ -61,7 +45,7 @@ App Launch URI: <code>http://localhost:3000/launch.html</code><br>
 App Redirect URI: <code>http://localhost:3000/</code><br>
 Scopes: <code>launch patient/\*.\*</code>
 
-<u><b>IMPORTANT</b></u> - if you are a Windows user and installed Docker Toolbox, your app won't be deployed on localhost but on a default IP address. The standard IP used by Docker Toolbox is <code>192.168.99.100</code> but yours could be different. Check the top of the Docker Quickstart Terminal window (by the whale) for your Docker machine IP. Use the same URIs as above but replace "localhost" with your IP.
+<u><b>IMPORTANT</b></u> - if you are a Windows user and installed Docker Toolbox, your app won't be deployed on localhost but on a default IP address. The standard IP used by Docker Toolbox is <code>192.168.99.100</code> but yours could be different. It is the IP you noted in step 1 when launching the terminal. Use the same URIs as above but replace "localhost" with that IP.
 
 ![params](img/params.png)
 
@@ -76,6 +60,25 @@ Copy this ID and open the file <i>public/js/launch-smart.js</i>.
 At the top of this file you will see: <br><code>let client = "REPLACE-WITH-CLIENT-ID-FROM-SANDBOX"</code><br>
 Paste the ID there so that it looks something like this (but with your ID):<br>
 <code>let client = "2a10ffeb-eb67-45a9-aa9e-5ebfd28297c6"</code><br> Save the file
+
+## 2. Start the app server
+Open the terminal app (Mac) or <b><u>restart</u></b> your Docker Quickstart Terminal (Windows) and  then go to the home directory of this project.
+
+<i>Windows users need to restart their Docker Quickstart Terminal so that the changes made to the <code>index.js</code> file will take effect.</i>
+
+Launch the server with the command <code>docker-compose -p <i>projectName</i> up --build &</code>
+
+Additional Docker commands if needed:
+* View server output: <code>docker logs <i>projectName</i>\_app_1</code>
+* Stop server: <code>docker stop <i>projectName</i>\_app_1</code>
+* Start server again: <code>docker start <i>projectName</i>\_app_1</code>
+* To wipe a previous build if you want to start over:
+    * <code>docker stop <i>projectName</i>\_app_1</code>
+    * <code>docker rm <i>projectName</i>\_app_1</code>
+    * <code>docker rmi <i>projectName</i>\_app</code>
+    * <code>docker volume prune</code>
+
+It will open your browser with a blank view of the app, you can close this since we will be SMART launching from the sandbox the way it would in an EHR.
 
 ## 4. Perform a SMART launch from your sandbox
 Select the "Apps" option on the sidebar
