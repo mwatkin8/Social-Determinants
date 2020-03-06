@@ -77,31 +77,6 @@ At the top of this file you will see: <br><code>let client = "REPLACE-WITH-CLIEN
 Paste the ID there so that it looks something like this (but with your ID):<br>
 <code>let client = "2a10ffeb-eb67-45a9-aa9e-5ebfd28297c6"</code><br> Save the file
 
-## 2. Install Docker
-This example uses Docker, the links below can help you get Docker installed.
-* Mac users: https://www.docker.com/products/docker-desktop
-    * Follow installer
-* Windows users: https://github.com/docker/toolbox/releases
-    * Download latest .exe file
-    * Follow installer
-
-## 3. Start the app server
-Open the terminal app (Mac) or the newly installed Docker Quickstart Terminal (Windows), go to the home directory of this project.
-
-Launch the server with the command <code>docker-compose -p <i>projectName</i> up --build &</code>
-
-Additional Docker commands if needed:
-* View server output: <code>docker logs <i>projectName</i>\_app_1</code>
-* Stop server: <code>docker stop <i>projectName</i>\_app_1</code>
-* Start server again: <code>docker start <i>projectName</i>\_app_1</code>
-* To wipe a previous build if you want to start over:
-    * <code>docker stop <i>projectName</i>\_app_1</code>
-    * <code>docker rm <i>projectName</i>\_app_1</code>
-    * <code>docker rmi <i>projectName</i>\_app</code>
-    * <code>docker volume prune</code>
-
-It will open your browser with a blank view of the app, you can close this since we will be SMART launching from the sandbox the way it would in an EHR.
-
 ## 4. Perform a SMART launch from your sandbox
 Select the "Apps" option on the sidebar
 
