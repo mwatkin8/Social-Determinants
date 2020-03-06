@@ -3,7 +3,7 @@
     "name": "social-determinants",
     "version": "1.0.0",
     "scripts": {
-        "start": "node_modules/.bin/gulp watch"
+        "start-server": "node_modules/.bin/gulp watch"
     },
     "description": "This app is a prototype that demonstrates how social determinants of health could be collected and utilized within an EHR. The app uses LOINC's PRAPARE questionnaire as well as the Bootstrap SB-Admin-2 template.",
     "keywords": [

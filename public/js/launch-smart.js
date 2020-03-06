@@ -1,6 +1,6 @@
 async function launch(){
     //Given by sandbox when registering
-    let client = "REPLACE-WITH-CLIENT-ID-FROM-SANDBOX";
+    let client = "cce2d598-1510-46f0-96c9-d314b8fd77d3";
 
     //Would use in live implementation, null for testing implementation
     let secret = null;
