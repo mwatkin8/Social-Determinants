@@ -1,7 +1,32 @@
 # Social Determinants SMART on FHIR App
 This app is a prototype that demonstrates how social determinants of health can be collected and utilized within an EHR. The app uses LOINC's [PRAPARE questionnaire](https://loinc.org/93025-5/) as well as the Bootstrap [SB-Admin-2](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2) template.
 
-## 1. Create a SMART on FHIR sandbox
+## 1. Install Docker
+This example uses Docker, the links below can help you get Docker installed.
+* Mac users: https://www.docker.com/products/docker-desktop
+    * Follow installer
+* Windows users: https://github.com/docker/toolbox/releases
+    * Download latest .exe file
+    * Follow installer
+
+## 2. Start the app server
+Open the terminal app (Mac) or the newly installed Docker Quickstart Terminal (Windows), go to the home directory of this project.
+
+Launch the server with the command <code>docker-compose -p <i>projectName</i> up --build &</code>
+
+Additional Docker commands if needed:
+* View server output: <code>docker logs <i>projectName</i>\_app_1</code>
+* Stop server: <code>docker stop <i>projectName</i>\_app_1</code>
+* Start server again: <code>docker start <i>projectName</i>\_app_1</code>
+* To wipe a previous build if you want to start over:
+    * <code>docker stop <i>projectName</i>\_app_1</code>
+    * <code>docker rm <i>projectName</i>\_app_1</code>
+    * <code>docker rmi <i>projectName</i>\_app</code>
+    * <code>docker volume prune</code>
+
+It will open your browser with a blank view of the app, you can close this since we will be SMART launching from the sandbox the way it would in an EHR.
+
+## 3. Create a SMART on FHIR sandbox
 This app was developed using an [HSPC Logica Sandbox](https://sandbox.logicahealth.org/), create an account and then create a new sandbox making sure that you use FHIR version R4, allow an open FHIR endpoint, and import sample patients, practitioners, and applications.
 
 ![newsandbox](img/newsandbox.png)
@@ -36,6 +61,8 @@ App Launch URI: <code>http://localhost:3000/launch.html</code><br>
 App Redirect URI: <code>http://localhost:3000/</code><br>
 Scopes: <code>launch patient/\*.\*</code>
 
+<u><b>IMPORTANT</b></u> - if you are a Windows user and installed Docker Toolbox, your app won't be deployed on localhost but on a default IP address. The standard IP used by Docker Toolbox is <code>192.168.99.100</code> but yours could be different. Check the top of the Docker Quickstart Terminal window (by the whale) for your Docker machine IP. Use the same URIs as above but replace "localhost" with your IP.
+
 ![params](img/params.png)
 
 After saving, you will be given a client ID.
@@ -59,7 +86,7 @@ This example uses Docker, the links below can help you get Docker installed.
     * Follow installer
 
 ## 3. Start the app server
-Open the terminal app (Mac) or the Docker terminal (Windows), go to the home directory of this project.
+Open the terminal app (Mac) or the newly installed Docker Quickstart Terminal (Windows), go to the home directory of this project.
 
 Launch the server with the command <code>docker-compose -p <i>projectName</i> up --build &</code>
 
