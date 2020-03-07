@@ -12,7 +12,7 @@ This example uses Docker, the links below can help you get Docker installed.
 
 ![windows_ip](img/windows_ip.png)
 
-## 3. Create a SMART on FHIR sandbox
+## 2. Create a SMART on FHIR sandbox
 This app was developed using an [HSPC Logica Sandbox](https://sandbox.logicahealth.org/), create an account and then create a new sandbox making sure that you use FHIR version R4, allow an open FHIR endpoint, and import sample patients, practitioners, and applications.
 
 ![newsandbox](img/newsandbox.png)
@@ -63,7 +63,7 @@ At the top of this file you will see: <br><code>let client = "REPLACE-WITH-CLIEN
 Paste the ID there so that it looks something like this (but with your ID):<br>
 <code>let client = "2a10ffeb-eb67-45a9-aa9e-5ebfd28297c6"</code><br> Save the file
 
-## 2. Start the app server
+## 3. Start the app server
 Open the terminal app (Mac) or <b><u>restart</u></b> your Docker Quickstart Terminal (Windows) and  then go to the home directory of this project.
 
 <i>Windows users need to restart their Docker Quickstart Terminal so that the changes made to the <code>index.js</code> file will take effect.</i>
